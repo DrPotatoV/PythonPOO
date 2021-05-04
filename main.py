@@ -2,30 +2,30 @@ nip = 1234
 opc = 1
 cant = 0
 saldo =print("Introduzca una cantidad")
+usuario = Objeto() 
+usuario.saldo = saldo
 print("Si desea consultar su saldo, presione 1")
 print("Si desea realizar un retiro, presione 2")
 print("Si desea hacer un deposito, presione 3")
 print("Para salir, presione 4")
 
-if (opc == 1){
-    print("Su saldo es de :"+ usuario.saldo + " pesos")
-}
-if (opc == 2){
+if opc == 1:
+    print("Ha seleccionado consultar su saldo")
+    print("Su saldo es de :" + usuario.saldo + " pesos")
+if opc == 2:
     print("Ha seleccionado retirar")
     cant = print("Que cantidad desea retirar:")
-    if (cant <= usuario.saldo ){
+    if cant <= usuario.saldo:
         usuario.saldo = usuario.saldo - cant
-    }
-    else{
-        print("No puede retirar mas que su saldo")
-    }
-}
-if (opc == 3){
-    print("Su saldo es de :"+ usuario.saldo + " pesos")
-}
-if (opc == 4){
-    print("Su saldo es de :"+ usuario.saldo + " pesos")
-}
+    else:
+        print("El monto excede su saldo")
+
+if opc == 3:
+    print("Ha seleccionado depositar")
+    cant = double(print("Que cantidad desea depositar:"))
+    print("Deposito exitoso")
+if opc == 4:
+    print("Gracias por usar un cajero nuestro, nos vemos pronto")
 
 
 '''print("Ejemplo de POO")
